@@ -1,0 +1,13 @@
+stages:
+  train_model:
+    cmd: python train.py
+    params:
+      - param
+    deps:
+    - train.py
+    metrics:
+    - metrics.json:
+        cache: false
+    plots:
+    - confusion_matrix.csv:
+        cache: false
