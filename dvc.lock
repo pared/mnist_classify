@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  train_model:
+    cmd: python train.py
+    deps:
+    - path: train.py
+      md5: 70d841a753f2906726b567dd6fad81bc
+      size: 2573
+    outs:
+    - path: confusion_matrix.csv
+      md5: b1801400f811092e8d743d0b71180889
+      size: 40017
+    - path: metrics.json
+      md5: cbd4d382f5dba44810832bc4a732d724
+      size: 32

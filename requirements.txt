@@ -2,3 +2,4 @@ keras
 tensorflow==2.5.0
 matplotlib
 sklearn
+git+https://github.com/iterative/dvc@master#egg=dvc
