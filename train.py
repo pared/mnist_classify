@@ -1,8 +1,8 @@
 import json
-from keras.datasets import mnist
-from keras.models import Sequential 
-from keras.layers.core import Dense, Activation
-from keras.utils import np_utils
+from tensorflow.keras.datasets import mnist
+from tensorflow.keras.models import Sequential 
+from tensorflow.keras.layers import Dense, Activation
+from tensorflow.keras.utils import to_categorical
 
 import numpy as np     
 np.random.seed(0) 
@@ -17,8 +17,8 @@ def load_data():
     x_train /= 255    
     x_test /= 255
     classes = 10
-    y_train = np_utils.to_categorical(y_train, classes)     
-    y_test = np_utils.to_categorical(y_test, classes)
+    y_train = to_categorical(y_train, classes)     
+    y_test = to_categorical(y_test, classes)
     return (x_train, y_train), (x_test, y_test)
  
 def get_model():
