@@ -16,12 +16,13 @@ jobs:
         with:
           python-version: '3.8.0'
       - uses: actions/checkout@v2.3.2
+        with:
+          fetch-depth: 0
       - name: prepare current version report
         run: |
           pip install -r requirements.txt
           git config user.name pr
           git config user.email pocak61350@rerunway.com
-          git fetch --prune
           dvc repro train_model
 
           dvc exp run train_model --queue --set-param param=2
