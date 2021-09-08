@@ -77,6 +77,6 @@ y_pred = model.predict(x_test)
 # write_confusion_matrix(y_test, y_pred)
 write_confusion_matrix_csv(y_test, y_pred) 
 
-# accuracy = score[1]
+accuracy = score[1]
 with open("metrics.json", "w") as fd:
     json.dump({'accuracy' : accuracy}, fd)

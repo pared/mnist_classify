@@ -4,15 +4,15 @@ stages:
     cmd: python train.py
     deps:
     - path: train.py
-      md5: 70d841a753f2906726b567dd6fad81bc
-      size: 2573
+      md5: e447cfb408f7e233f587b4db2b6812f7
+      size: 2575
     params:
       params.yaml:
         param: 1
     outs:
     - path: confusion_matrix.csv
-      md5: cd0355dbe39bf1f3395a48e9f8fbe1e3
+      md5: 00e1f9d0d1bab29a927e3b231102b8c2
       size: 40017
     - path: metrics.json
-      md5: 9df324c8e3c422d7403ec0c63999c0b0
+      md5: 83efa6e781bdd4c45c9c29cba322144c
       size: 32
