@@ -19,6 +19,8 @@ jobs:
       - name: prepare current version report
         run: |
           pip install -r requirements.txt
+          git config user.name pr
+          git config user.email pocak61350@rerunway.com
           dvc repro train_model
 
           dvc exp run train_model --queue --set-param param=2
